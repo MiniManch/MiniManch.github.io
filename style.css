@@ -27,7 +27,7 @@ body{
 
 /*setting header image*/
 header{
-	background-image: url("Images/background.jpg");
+	background-image: url("https://i.postimg.cc/9QBKBw7g/Background.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	height:100vh;
@@ -37,7 +37,7 @@ header{
 
 /*Changing the photo to a more dark one to change the opacity without changing opacity of child tags*/
 header:hover{
-	background-image: url("Images/background_d.jpg");
+	background-image: url("https://i.postimg.cc/13yY4RjG/Background-d.jpg");
 }
 
 /*Placing the text in the center, also the button, and changing color on hover  */
