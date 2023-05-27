@@ -30,12 +30,8 @@
      <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg fixed-top d-flex justify-content-center">
       <div class="d-flex justify-content-center">
-        <a class="navbar-brand" href="#">E.R.L</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav" id="hover_stuff">
+        <a class="navbar-brand " href="#">E.R.L</a>
+          <ul class="navbar-nav flex-sm-row d-flex flex-md-row" id="hover_stuff">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -46,7 +42,6 @@
               <a class="nav-link link-dark " href="#contact">Contact</a>
             </li>
           </ul>
-        </div>
       </div>
     </nav>
     <!-- End of Navbar-->
@@ -68,25 +63,28 @@
     <h3>Gallery~🖼</h3>
     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item ">
           <a href="https://github.com/MiniManch/DI_Bootcamp/tree/master/Week-2/Day-2/Exercise-2" target='_blank'><img src="https://i.postimg.cc/2ymXvz5N/Capture.png" class="d-block w-100 c-img" alt="..."></a>
         </div>
-        <div class="carousel-item">
-          <a href="https://github.com/MiniManch/DI_Bootcamp/tree/master/Week-1/Day-4/Login-Page" target='_blank'><img src="https://i.postimg.cc/3J8cxJ6g/Capture2.png" class="d-block w-100 c-img" alt="..."></a>
-        </div>
+
         <div class="carousel-item">
           <a href="https://github.com/MiniManch/DI-Bootcamp-Stage1/tree/main/Final-Project-Tribute" target='_blank'><img src="https://i.postimg.cc/VNC7VSrc/Capture3.png" class="d-block w-100 c-img" alt="..." ></a>
         </div>
-        <div class="carousel-item">
+
+        <div class="carousel-item active">
           <a href="https://github.com/MiniManch/Hackathon_1" target='_blank'><img src="https://i.postimg.cc/mgqXj3rw/Capture4.png" class="d-block w-100 c-img" alt="..."></a>
         </div>
-        <div class="carousel-item">
-          <a href="https://github.com/MiniManch/DI_Bootcamp/tree/master/Week-9/Day-3/Game-Characters" target='_blank'><img src="https://i.postimg.cc/hP23zRWN/Capture5.png" class="d-block w-100 c-img" alt="..."></a>
+
+        <<div class="carousel-item">
+          <a href="https://github.com/MiniManch/Final-Project" target='_blank'>
+            <img src="https://i.postimg.cc/RVwtqxPp/Capture.png" class="d-block w-100 c-img" alt="..."></a>
         </div>
-        <div class="carousel-item">
-          <a href="https://github.com/MiniManch/DI_Bootcamp/tree/master/Week-7/Day-5/Mini-Project-TicTacToe" target='_blank'>
-            <img src="https://i.postimg.cc/jqQ1TJ8x/Capture6.png" class="d-block w-100 c-img" alt="..."></a>
+
+        <div class="carousel-item" id='pokemon'>
+          <a href="https://github.com/MiniManch/Hackathon_2" target='_blank'>
+            <img src="https://i.postimg.cc/6Q4t5tcy/Capture.png" class="d-block w-100 c-img" alt="..."></a>
         </div>
+
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -119,17 +117,27 @@
 
     <script>
       let navbar       = document.querySelector('.navbar');
+      let width = screen.width;
+      let nav_div = document.querySelector('#hover_stuff');
 
       function scrollFunc() {
-        if (document.documentElement.scrollTop >= 900) {
+        if ( document.documentElement.scrollTop >= 900) {
+          nav_div.classList.add('flex-sm-column');
+          nav_div.classList.remove('flex-sm-row');
+          console.log(nav_div)
           navbar.id = "changed-navbar";
         }else{
-          navbar.id = 'navbar';
+          if (width <700){
+            nav_div.classList.remove('flex-sm-column');
+            nav_div.classList.add('flex-sm-row');
           }
-          console.log(document.documentElement.scrollTop);
+          navbar.id = 'navbar';
         }
+          console.log(document.documentElement.scrollTop);
+      }
         window.addEventListener('scroll',scrollFunc);
 
+        console.log(width)
     </script>
   </body>
 </html>
