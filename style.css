@@ -73,19 +73,18 @@ section{
 }
 #photo_div{
 	display:flex;
-	justify-content: space-around;
+	/* justify-content: space-around; */
 	height:60vh;
-	width: 50vw;
-	margin:10vh auto ;
+	/* width: 50vw; */
+	margin:10vh auto;
 	margin-bottom:0;
-
+	margin-left: 20vw;
 }
 
 #photo_div>img{
 	margin-top:2vh;
 	margin-right:3vh;
-	height: 60%;
-	width: 40%;
+	height:45vh;
 	border:1px solid white;
 	border-radius:70%;
 	padding:0;
@@ -123,6 +122,7 @@ section{
 /*changing placement of title of gallery*/
 section + h3{
 	margin-left: 20vw;
+	width: fit-content;
 }
 
 /*adding link to the summary next to my name*/
@@ -207,4 +207,45 @@ nav{
 	background-image:url("https://iili.io/H1M8u7S.png") ;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+
+#pokemon{
+	position: relative;
+	top:-8vh;
+	zoom: 0.6;
+}
+
+
+@media only screen and (max-width: 700px) {
+	.fixed-top{
+		left:-15vw;
+	}
+	.nav-link{
+		margin-left: 1vw;
+	}
+	.flex-sm-column{
+		position: relative;
+		left:-5vw;
+		top:3vh;
+	}
+	#photo_div{
+		display: block;
+		margin-left: 3vw;
+	}
+	#photo_div>img{
+		height: 20vh;
+		width: 25vw;
+		border:1px solid white;
+		border-radius:70%;
+		padding:0;
+		box-shadow: 20px 20px 40px grey;
+		margin-left: 20vw;
+	}
+	#carouselExampleRide{
+		margin: 0;
+		margin-top: 5vh;
+		width:100%;
+	}
+
 }
