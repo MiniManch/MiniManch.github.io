@@ -5926,12 +5926,24 @@ a.close.disabled {
   .modal-sm {
     max-width: 300px;
   }
+  .web-des{
+    margin-right:9vw;
+  }
+
+  .card.card-carousel{
+    width: 100%;
+    height:100%;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 992px) {
   .modal-lg,
   .modal-xl {
     max-width: 800px;
+  }
+  .web-des{
+    margin-right: 0;
   }
 }
 
@@ -6477,6 +6489,27 @@ a.close.disabled {
 
 .bg-primary {
   background-color: #0BCEAF !important;
+}
+
+.bg-primary-1{
+  background-color: #0ac2a3;
+}
+
+.bg-primary-2{
+  background-color:  #09aa8f;
+}
+
+.bg-primary-3{
+  background-color:   #08917a;
+}
+.bg-primary-4{
+  background-color:  #067966;
+}
+.bg-primary-5{
+  background-color:  #056152;
+}
+.bg-primary-6{
+  background-color:  #04493d;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
