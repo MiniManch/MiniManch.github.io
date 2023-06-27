@@ -6557,9 +6557,7 @@ button.bg-success:focus {
 }
 
 .article-card {
-  max-width: 500px;
   margin-bottom: 3vw;
-  height: 300px;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
